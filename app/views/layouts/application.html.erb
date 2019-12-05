@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myapp</title>
+    <title><%= yield(:title) %> | Team Orders Organizer </title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <%= render 'layouts/header' %>
+
   <body>
-    <%= render 'layouts/header' %>
     <%= yield %>
   </body>
+
+  <%= render 'layouts/footer' %>
 </html>
