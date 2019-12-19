@@ -1,0 +1,24 @@
+<% provide(:title, 'Current Orders') %>
+<h1 align="center"> Current Orders </h1>
+<div align="center">
+    <table class="wd-Table--striped">
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Order </th>
+                <th> Comments </th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for order in @orders %>
+                <tr>
+                    <td> <%= order.name %> </td>
+                    <td> <%= order.request %> </td>
+                    <td> <%= order.comments %> </td>
+                </tr>
+            <% end %> 
+        </tbody>
+    </table>
+</div>
+<p> The history of every order and their significance is recorded below... </p>
+<%= render 'layouts/filler' %>

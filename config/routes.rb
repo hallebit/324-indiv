@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'pages/home'
-  get 'pages/help'
-  get 'pages/order'
   root 'pages#home'
+  get 'help',       to: 'pages#help'
+  get 'dummy',      to: 'pages#order'
+  get 'order',      to: 'orders#new'
+  get 'orders',     to: 'orders#list'
+  resources :orders
 end

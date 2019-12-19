@@ -1,10 +1,11 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "Team Orders Organizer", "/pages/home", id: "logo" %>
+    <%= link_to "Team Orders Organizer", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Help", "/pages/help"%></li>
-        <li><%= link_to "Order", "/pages/order"%></li>
+        <li><%= link_to "Help", help_path%></li>
+        <li><%= link_to "Order", order_path%></li>
+        <li><%= link_to "Orders", orders_path%></li>
       </ul>
     </nav>
   </div>

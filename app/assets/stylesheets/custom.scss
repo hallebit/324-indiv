@@ -47,7 +47,7 @@ img {
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
   }
   
 td, th {
@@ -66,14 +66,7 @@ tr:nth-child(even) {
     background-color: #eeeeee;
 }
 
-div {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-button {
+button, input[type=submit] {
     background-color: #c22408;
     border-color: #c22408;
     color: white;
@@ -96,4 +89,29 @@ footer {
     width: 100%;
     color: #292b2c;
     padding-top: 10px;
+}
+
+input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+}
+  
+input {
+    height: auto !important;
+}
+
+#error_explanation {
+    color: red;
+    ul {
+      color: red;
+      margin: 0 0 30px 0;
+    }
+  }
+  
+.field_with_errors {
+    @extend .has-error;
+    .form-control {
+      color: $state-danger-text;
+    }
 }

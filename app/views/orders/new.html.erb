@@ -1,0 +1,27 @@
+<% provide(:title, 'New Order') %>
+<h1 align="center">New Order</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <p> Please add your Order details below. You MUST INCLUDE your name and your requested meal. </p>
+    <%= form_for(@order) do |f| %>
+      <%= render 'shared/error_messages' %>
+      
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :request %>
+      <%= f.text_field :request, class: 'form-control' %>
+
+      <%= f.label :comments %>
+      <%= f.text_field :comments, class: 'form-control' %>
+
+      <%= f.submit "Order Now", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<p> Here are just a few ideas about the type of meal that you might request (within reason of course)... </p>
+<%= image_tag "simple sandwich.jfif", alt:"A turkey letuce tomato sandwich on wheat" %>
+<p> Woah! That was a bit explicit. Here's something a bit more general. </p>
+<%= render 'layouts/filler' %>
